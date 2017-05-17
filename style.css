@@ -41,6 +41,10 @@ p {
 	margin-bottom: 9px;;
 }
 
+.navbar-brand {
+	margin-top: -3px;
+}
+
 .navbar-brand img {
 	margin-right: 0.5em;
 	max-height: 30px;
@@ -97,7 +101,7 @@ p {
 
 h2:hover .editsection,
 h3:hover .editsection,
-h4:hover .editsection,
+h4:hover .editsectiona
 h5:hover .editsection,
 h6:hover .editsection {
 	opacity: 1;
@@ -124,6 +128,7 @@ option.unclickable {
 	border: 1px solid rgba( 0, 0, 0, 0.5 );
 	width: 20px;
 	height: 20px;
+	margin-top: -7px;
 }
 
 #wiki-body h2 {
@@ -450,7 +455,6 @@ pre.linenums ol {
 .subnav-fixed {
 	position: fixed;
 	top: 49px;
-	left: 0;
 	right: 0;
 	z-index: 1020; /* 10 less than .navbar-fixed to prevent any overlap */
 	border-color: #d5d5d5;
@@ -462,7 +466,7 @@ pre.linenums ol {
 .subnav-fixed .nav {
 	width: 1170px;
 	margin: 0 auto;
-	margin-left: -12px;
+	margin-left: -43px;
 	padding: 0 1px;
 }
 .subnav .nav > li:first-child > a,
@@ -476,8 +480,8 @@ pre.linenums ol {
 	body { padding-top: 103px; }
 
 	.mw-headline {
-		margin-top: -103px;
-		padding-top: 103px;
+		margin-top: -10px;
+		padding-top: 10px;
 	}
 
 	.subnav #subnav-select {
@@ -770,3 +774,4 @@ table.list th {
 .list tbody > tr:nth-child(odd) > td {
   background-color: #f9f9f9;
 }
+
