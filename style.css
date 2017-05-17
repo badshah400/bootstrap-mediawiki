@@ -466,7 +466,7 @@ pre.linenums ol {
 .subnav-fixed .nav {
 	width: 1170px;
 	margin: 0 auto;
-	margin-left: -43px;
+	margin-left: -10px;
 	padding: 0 1px;
 }
 .subnav .nav > li:first-child > a,
