@@ -106,9 +106,10 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 
 					<div class="collapse navbar-collapse">
 						<ul class="nav navbar-nav">
-							<li>
-							<a href="<?php echo $this->data['nav_urls']['mainpage']['href'] ?>">Home</a>
-							</li>
+							<!--One link to Main Page is enough!
+							<li> <a href="<?php echo $this->data['nav_urls']['mainpage']['href'] ?>">Home</a>
+							</li>-->
+
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools <span class="caret"></span></a>
 								<ul class="dropdown-menu">
@@ -144,7 +145,7 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 						?>
 						<ul class="nav navbar-nav navbar-right">
 							<li>
-							<?php echo Linker::linkKnown( SpecialPage::getTitleFor( 'Userlogin' ), wfMsg( 'login' ) ); ?>
+							<?php echo Linker::linkKnown( SpecialPage::getTitleFor( 'Userlogin' ), wfMessage( 'login' ) ); ?>
 							</li>
 						</ul>
 						<?php
@@ -243,8 +244,11 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 			<div class="container">
 				<?php $this->includePage('Bootstrap:Footer'); ?>
 				<footer>
-					<p>&copy; <?php echo date('Y'); ?> by <a href="<?php echo (isset($wgCopyrightLink) ? $wgCopyrightLink : 'http://borkweb.com'); ?>"><?php echo (isset($wgCopyright) ? $wgCopyright : 'BorkWeb'); ?></a> 
-						&bull; Powered by <a href="http://mediawiki.org">MediaWiki</a> 
+					<p>
+						<a href="http://mediawiki.org">
+						<img src="<?php global $wgScriptPath; echo ${wgScriptPath}.'/resources/assets/poweredby_mediawiki_176x62.png';?>" style="height:40px;"></a>
+						&nbsp;&bull; Theme by <a href="<?php echo (isset($wgCopyrightLink) ? $wgCopyrightLink : 'http://borkweb.com'); ?>">
+                                           <?php echo (isset($wgCopyright) ? $wgCopyright : 'BorkWeb'); ?></a> &copy; <?php echo date('Y'); ?> 
 					</p>
 				</footer>
 			</div><!-- container -->
@@ -466,7 +470,8 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 			$wgParserOptions = new ParserOptions($wgUser);
 			// get the text as static wiki text, but with already expanded templates,
 			// which also e.g. to use {{#dpl}} (DPL third party extension) for dynamic menus.
-			$parserOutput = $wgParser->preprocess($article->getRawText(), $pageTitle, $wgParserOptions );
+                        $content = $article->getContent( Revision::RAW );
+                        $parserOutput = $wgParser->preprocess($content, $pageTitle, $wgParserOptions );
 			return $parserOutput;
 		}
 	}
@@ -479,7 +484,8 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 		} else {
 			$article = new Article($pageTitle);
 			$wgParserOptions = new ParserOptions($wgUser);
-			$parserOutput = $wgParser->parse($article->getRawText(), $pageTitle, $wgParserOptions);
+                        $content = $article->getContent( Revision::RAW );
+                        $parserOutput = $wgParser->parse($content, $pageTitle, $wgParserOptions);
 			echo $parserOutput->getText();
 		}
 	}
