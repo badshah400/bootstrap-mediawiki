@@ -443,11 +443,11 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 				$link['title'] = '<i class="fa fa-' . $icon . '"></i> ' . $link['title'];
 			} elseif( 'user' == $which ) {
 				switch( $link['title'] ) {
-				case 'My talk': $icon = 'comment'; break;
-				case 'My preferences': $icon = 'cog'; break;
-				case 'My watchlist': $icon = 'eye-close'; break;
-				case 'My contributions': $icon = 'list-alt'; break;
-				case 'Log out': $icon = 'off'; break;
+				case 'Talk': $icon = 'comment'; break;
+				case 'Preferences': $icon = 'cog'; break;
+				case 'Watchlist': $icon = 'eye'; break;
+				case 'Contributions': $icon = 'list-alt'; break;
+				case 'Log out': $icon = 'sign-out'; break;
 				default: $icon = 'user'; break;
 				}//end switch
 
