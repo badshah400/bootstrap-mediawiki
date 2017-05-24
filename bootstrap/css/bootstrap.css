@@ -903,9 +903,13 @@ body {
 }
 input,
 button,
-select,
-textarea {
+select {
   font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+textarea {
+  font-family: monospace;
   font-size: inherit;
   line-height: inherit;
 }
