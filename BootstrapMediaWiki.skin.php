@@ -117,6 +117,9 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 									<li><a href="<?php echo $url_prefix; ?>Special:SpecialPages" class="special-pages"><i class="fa fa-star-o"></i> Special Pages</a></li>
 									<?php if ( $wgEnableUploads ) { ?>
 									<li><a href="<?php echo $url_prefix; ?>Special:Upload" class="upload-a-file"><i class="fa fa-upload"></i> Upload a File</a></li>
+									<li><a href="<?php echo $url_prefix; ?>Special:Book?bookcmd=book_creator&referer=<?php echo $this->html( 'title' ); ?>" class="book-creator"><i class="fa fa-book"></i> Start Book Creator</a></li>
+									<li><a href="<?php echo $url_prefix; ?>Special:Book?bookcmd=render_article&arttitle=<?php echo $this->html( 'title' ); ?>" class="render-page"><i class="fa fa-file-pdf-o"></i> Render page as PDF</a></li>
+									<li><a href="<?php echo $url_prefix; ?>Special:Book?bookcmd=render_article&arttitle=<?php echo $this->html( 'title' ); ?>&writer=odf" class="render-page"><i class="fa fa-file-word-o"></i> Render page as ODT</a></li>
 									<?php } ?>
 								</ul>
 							</li>
@@ -429,14 +432,16 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 
 			if( 'page' == $which ) {
 				switch( $link['title'] ) {
+				case 'Main page': $icon = 'home'; break;
 				case 'Page': $icon = 'file'; break;
-				case 'Discussion': $icon = 'comment'; break;
+				case 'Discussion': $icon = 'comments'; break;
 				case 'Edit': $icon = 'pencil'; break;
 				case 'History': $icon = 'clock-o'; break;
 				case 'Delete': $icon = 'remove'; break;
 				case 'Move': $icon = 'arrows'; break;
 				case 'Protect': $icon = 'lock'; break;
-				case 'Watch': $icon = 'eye-open'; break;
+				case 'Change protection': $icon = 'unlock'; break;
+				case 'Watch': $icon = 'eye'; break;
 				case 'Unwatch': $icon = 'eye-slash'; break;
 				}//end switch
 
