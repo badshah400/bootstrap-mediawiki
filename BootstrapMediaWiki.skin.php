@@ -91,7 +91,7 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 
 		$this->html('headelement');
 		?>
-		<div class="navbar navbar-default navbar-fixed-top <?php echo $wgNavBarClasses; ?>" role="navigation">
+		<div class="navbar navbar-default navbar-fixed-top hidden-print <?php echo $wgNavBarClasses; ?>" role="navigation">
 				<div class="container">
 					<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
 					<div class="navbar-header">
@@ -167,7 +167,7 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 		<?php
 		if( $subnav_links = $this->get_page_links('Bootstrap:Subnav') ) {
 			?>
-			<div class="subnav subnav-fixed">
+			<div class="subnav subnav-fixed hidden-print">
 				<div class="container">
 					<?php
 
@@ -213,8 +213,13 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 				<!-- /newtalk -->
 				<?php endif; ?>
 
-				<div class="pagetitle page-header">
+				<div class="pagetitle page-header hidden-print">
 					<h1><?php $this->html( 'title' ) ?> <small><?php $this->html('subtitle') ?></small></h1>
+				</div>	
+				<div class="pagetitle visible-print-block" style="margin-top: -100px;">
+					<h1><?php $this->html( 'title' ) ?> <small><?php $this->html('subtitle') ?></small></h1>
+					From <?php echo $wgSitename?>
+					<hr style="border-color: #ccc; background-color: #ccc; color: #ccc;">
 				</div>	
 
 				<div class="body">
@@ -244,7 +249,7 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 				?>
 			</div><!-- container -->
 		</div>
-		<div class="bottom">
+		<div class="bottom hidden-print">
 			<div class="container">
 				<?php $this->includePage('Bootstrap:Footer'); ?>
 				<footer>
