@@ -477,13 +477,12 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 		if(!$pageTitle->exists()) {
 			return 'Create the page [[Bootstrap:TitleBar]]';
 		} else {
-			$article = new Article($pageTitle);
+			$article = new WikiPage($pageTitle);
 			$wgParserOptions = new ParserOptions($wgUser);
 			// get the text as static wiki text, but with already expanded templates,
 			// which also e.g. to use {{#dpl}} (DPL third party extension) for dynamic menus.
-                        $content = $article->getContent( Revision::RAW );
-                        $parserOutput = $wgParser->preprocess($content, $pageTitle, $wgParserOptions );
-			return $parserOutput;
+			$content = $article->getContent( Revision::RAW );
+			return $content->getNativeData();
 		}
 	}
 
@@ -493,10 +492,10 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 		if(!$pageTitle->exists()) {
 			echo 'The page [[' . $title . ']] was not found.';
 		} else {
-			$article = new Article($pageTitle);
+			$article = new WikiPage($pageTitle);
 			$wgParserOptions = new ParserOptions($wgUser);
-                        $content = $article->getContent( Revision::RAW );
-                        $parserOutput = $wgParser->parse($content, $pageTitle, $wgParserOptions);
+			$content = $article->getContent( Revision::RAW );
+			$parserOutput = $content->getParserOutput($pageTitle, null, $wgParserOptions, true);
 			echo $parserOutput->getText();
 		}
 	}
