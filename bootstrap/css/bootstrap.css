@@ -199,9 +199,11 @@ th {
   a:visited {
     text-decoration: underline;
   }
-  a[href]:after {
+/* Don't print the href for links, it looks awkward with image links */
+/*  a[href]:after {
     content: " (" attr(href) ")";
   }
+*/
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
