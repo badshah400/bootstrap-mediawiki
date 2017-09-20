@@ -19,6 +19,9 @@ if(file_exists('includes/SkinTemplate.php')){
     require_once('includes/SkinTemplate.php');
 }
 
+// Needed for linkRenderer
+use MediaWiki\MediaWikiServices;
+
 /**
  * Inherit main code from SkinTemplate, set the CSS and template filter.
  * @package MediaWiki
@@ -85,6 +88,7 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 		$this->skin = $this->data['skin'];
 		$action = $wgRequest->getText( 'action' );
 		$url_prefix = str_replace( '$1', '', $wgArticlePath );
+		$linkRenderer = MediaWikiServices::getInstance()->getLinkRenderer();
 
 		// Suppress warnings to prevent notices about missing indexes in $this->data
 		wfSuppressWarnings();
@@ -149,7 +153,7 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 						?>
 						<ul class="nav navbar-nav navbar-right">
 							<li>
-							<?php echo Linker::linkKnown( SpecialPage::getTitleFor( 'Userlogin' ), wfMessage( 'login' ) ); ?>
+                                                        <?php echo $linkRenderer->makeLink( SpecialPage::getTitleValueFor( 'Userlogin' ) , wfMessage( 'login' ), array(), array('returnto' => $this->getSkin()->getTitle() ) ); ?>
 							</li>
 						</ul>
 						<?php
