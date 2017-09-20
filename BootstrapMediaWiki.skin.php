@@ -444,6 +444,7 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 				switch( $link['title'] ) {
 				case 'Main page': $icon = 'home'; break;
 				case 'Page': $icon = 'file'; break;
+				case 'User page': $icon = 'user'; break;
 				case 'Discussion': $icon = 'comments'; break;
 				case 'Edit': $icon = 'pencil'; break;
 				case 'History': $icon = 'clock-o'; break;
