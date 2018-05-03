@@ -2,7 +2,7 @@
 /**
  * Bootstrap - A basic MediaWiki skin based on Twitter's excellent Bootstrap CSS framework
  *
- * @Version 1.0.0
+ * @Version 2.0.0
  * @Author Matthew Batchelder <borkweb@gmail.com>
  * @Copyright Matthew Batchelder 2012 - http://borkweb.com/
  * @License: GPLv2 (http://www.gnu.org/copyleft/gpl.html)
