@@ -29,8 +29,7 @@
 			"styles": {
 				"bootstrap/css/bootstrap.min.css": { "media": "all" },
 				"google-code-prettify/prettify.css": { "media": "all" },
-				"style.css": { "media": "all" },
-				"font-awesome/css/font-awesome.min.css": { "media": "all" }
+				"style.css": { "media": "all" }
 			}
 		},
 		"skins.bootstrapmediawiki.js": {

@@ -38,9 +38,14 @@ class SkinBootstrapMediaWiki extends SkinTemplate {
 	 * initialize the page
 	 */
 	public function initPage( OutputPage $out ) {
+		global $wgLocalStylePath;
 		global $wgSiteJS;
 		parent::initPage( $out );
 		$out->addModuleScripts( 'skins.bootstrapmediawiki.js' );
+		if ( isset( $wgSiteJS ) ) {
+			$out->addScriptFile( $wgLocalStylePath . '/BootstrapMediaWiki/' . $wgSiteJS );
+		}//end if
+
 		$out->addMeta( 'viewport', 'width=device-width, initial-scale=1, maximum-scale=1' );
 	}//end initPage
 
@@ -48,12 +53,20 @@ class SkinBootstrapMediaWiki extends SkinTemplate {
 	 * prepares the skin's CSS
 	 */
 	public function setupSkinUserCss( OutputPage $out ) {
+		global $wgLocalStylePath;
 		global $wgSiteCSS;
 
 		parent::setupSkinUserCss( $out );
 
 		$out->addModuleStyles( array(
 			'mediawiki.skinning.interface', 'skins.bootstrapmediawiki' ));
+		// we need to include this here so the file pathing is right
+		$out->addStyle( $wgLocalStylePath . '/' . $this->stylename .
+				'/font-awesome/css/font-awesome.min.css' );
+		if ( isset( $wgSiteCSS ) ) {
+			$out->addStyle( $wgLocalStylePath . '/' . $this->stylename . '/' . $wgSiteCSS );
+		}//end if
+
 
 	}//end setupSkinUserCss
 }
