@@ -238,9 +238,11 @@ a.new {
 }
 
 #catlinks {
+	border: none;
 	border-top: 1px dotted #eee;
 	margin-top: 2em;
 	padding: 1em 0;
+	background-color: transparent;
 }
 
 #catlinks #mw-normal-catlinks > a {
