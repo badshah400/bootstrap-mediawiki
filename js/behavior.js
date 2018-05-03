@@ -71,8 +71,7 @@ $(function() {
 	} else {
 		$('#toc').each(function() {
 			var $toc = $(this);
-			var $title = $toc.find('#toctitle');
-			var $links = $title.siblings('ul');
+			var $links = $toc.find('ul:first');
 
 			$('.page-header').prepend('<ul class="nav nav-pills pull-right"><li class="dropdown" id="page-contents"><a class="dropdown-toggle" data-toggle="dropdown"><i class="icon-list"></i> Contents <span class="caret"></span></a> <ul class="dropdown-menu"></ul></li></ul>');
 
