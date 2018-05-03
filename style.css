@@ -27,6 +27,13 @@ textarea {
 	text-shadow: 1px 1px 0 rgb(255,255,255);
 }
 
+h1 {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	border-bottom: none;
+}
+
 h2 .mw-headline { font-size: 18px; }
 h3 .mw-headline { font-size: 16px; }
 h4 .mw-headline { font-size: 14px; }
