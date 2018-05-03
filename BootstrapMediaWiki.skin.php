@@ -29,8 +29,8 @@ use MediaWiki\MediaWikiServices;
  */
 class SkinBootstrapMediaWiki extends SkinTemplate {
 	/** Using Bootstrap */
-	public $skinname = 'bootstrap-mediawiki';
-	public $stylename = 'bootstrap-mediawiki';
+	public $skinname = 'bootstrapmediawiki';
+	public $stylename = 'BootstrapMediaWiki';
 	public $template = 'BootstrapMediaWikiTemplate';
 	public $useHeadElement = true;
 
@@ -40,7 +40,7 @@ class SkinBootstrapMediaWiki extends SkinTemplate {
 	public function initPage( OutputPage $out ) {
 		global $wgSiteJS;
 		parent::initPage( $out );
-		$out->addModuleScripts( 'skins.bootstrapmediawiki' );
+		$out->addModuleScripts( 'skins.bootstrapmediawiki.js' );
 		$out->addMeta( 'viewport', 'width=device-width, initial-scale=1, maximum-scale=1' );
 	}//end initPage
 
@@ -52,10 +52,9 @@ class SkinBootstrapMediaWiki extends SkinTemplate {
 
 		parent::setupSkinUserCss( $out );
 
-		$out->addModuleStyles( 'skins.bootstrapmediawiki' );
+		$out->addModuleStyles( array(
+			'mediawiki.skinning.interface', 'skins.bootstrapmediawiki' ));
 
-		// we need to include this here so the file pathing is right
-		$out->addStyle( 'bootstrap-mediawiki/font-awesome/css/font-awesome.min.css' );
 	}//end setupSkinUserCss
 }
 

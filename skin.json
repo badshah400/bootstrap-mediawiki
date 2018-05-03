@@ -1,0 +1,57 @@
+{
+	"name": "Bootstrap Mediawiki",
+	"author": [
+		"[http://borkweb.com Matthew Batchelder]"
+	],
+	"url": "https://github.com/borkweb/bootstrap-mediawiki",
+	"descriptionmsg": "MediaWiki skin using Bootstrap 3",
+	"namemsg": "skinname-bootstrapmediawiki",
+	"license-name": "GPL-2.0-or-later",
+	"type": "skin",
+	"requires": {
+		"MediaWiki": ">= 1.29.0"
+	},
+	"ConfigRegistry": {
+		"bootstrapmediawiki": "GlobalVarConfig::newInstance"
+	},
+	"ValidSkinNames": {
+		"bootstrapmediawiki": "BootstrapMediaWiki"
+	},
+	"AutoloadClasses": {
+		"SkinBootstrapMediaWiki": "BootstrapMediaWiki.skin.php"
+	},
+	"MessagesDirs": {
+		"BootstrapMediawiki": "i18n"
+	},
+
+	"ResourceModules": {
+		"skins.bootstrapmediawiki": {
+			"styles": {
+				"bootstrap/css/bootstrap.min.css": { "media": "all" },
+				"google-code-prettify/prettify.css": { "media": "all" },
+				"style.css": { "media": "all" },
+				"font-awesome/css/font-awesome.min.css": { "media": "all" }
+			}
+		},
+		"skins.bootstrapmediawiki.js": {
+			"scripts": [
+				"bootstrap/js/bootstrap.min.js",
+				"google-code-prettify/prettify.js",
+				"js/jquery.ba-dotimeout.min.js",
+				"js/behavior.js"
+			],
+			"position": "top",
+			"dependencies": [
+				"jquery",
+				"jquery.mwExtension",
+				"jquery.client",
+				"jquery.cookie"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "BootstrapMediaWiki"
+	},
+	"manifest_version": 1
+}

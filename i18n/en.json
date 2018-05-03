@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+		"[http://borkweb.com Matthew Batchelder]"
+		]
+	},
+	"skinname-bootstrapmediawiki": "Bootstrap Mediawiki",
+	"bootstrapmediawiki-skin-desc": "Wiki skin using Bootstrap 3"
+}
