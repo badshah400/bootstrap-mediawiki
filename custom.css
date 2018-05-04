@@ -81,3 +81,12 @@
 .mud-dir.show-reverse.show-long .reverse-long {
 	display: block;
 }
+
+.navbar,
+.subnav {
+	font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+	font-family: Merriweather, "Times New Roman", Times, serif;
+}
