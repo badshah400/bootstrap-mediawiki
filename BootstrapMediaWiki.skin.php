@@ -3,9 +3,10 @@
  * Bootstrap - A basic MediaWiki skin based on Twitter's excellent Bootstrap CSS framework
  *
  * @Version 2.0.0
- * @Author Matthew Batchelder <borkweb@gmail.com>
+ * @Author Matthew Batchelder <borkweb@gmail.com>, Atri B <badshah400@gmail.com>
  * @Copyright Matthew Batchelder 2012 - http://borkweb.com/
- * @License: GPLv2 (http://www.gnu.org/copyleft/gpl.html)
+ * @Copyright Atri B 2018 <badshah400@gmail.com>
+ * @License: GPLv2+ (http://www.gnu.org/copyleft/gpl.html)
  */
 
 if ( ! defined( 'MEDIAWIKI' ) ) {
