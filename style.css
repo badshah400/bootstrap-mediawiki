@@ -784,3 +784,10 @@ table.list th {
   background-color: #f9f9f9;
 }
 
+input[type="checkbox"]
+{
+  opacity: 1   !important;
+  width:   1em !important;
+  height:  1em !important;	
+  margin: 0 0.5em 0 -18px !important;
+}
