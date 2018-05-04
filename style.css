@@ -791,3 +791,16 @@ input[type="checkbox"]
   height:  1em !important;	
   margin: 0 0.5em 0 -18px !important;
 }
+
+.mw-indicators {
+	float: right;
+	margin-right: 5px; /* A light margin right so items
+                              don't look like falling off */
+	position: relative;
+	z-index: 1;
+}
+
+.mw-indicator {
+	display: inline-block;
+	zoom: 1;
+}

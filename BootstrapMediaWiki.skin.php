@@ -76,7 +76,7 @@ class SkinBootstrapMediaWiki extends SkinTemplate {
  * @package MediaWiki
  * @subpackage Skins
  */
-class BootstrapMediaWikiTemplate extends QuickTemplate {
+class BootstrapMediaWikiTemplate extends BaseTemplate {
 	/**
 	 * @var Cached skin object
 	 */
@@ -231,6 +231,8 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 				<div class="usermessage"><?php $this->html( 'newtalk' )  ?></div>
 				<!-- /newtalk -->
 				<?php endif; ?>
+
+				<?php if ( ! empty( $this->data['indicators'] ) ) echo $this->getIndicators(); ?>
 
 				<div class="pagetitle page-header hidden-print">
 					<h1><?php $this->html( 'title' ) ?> <small><?php $this->html('subtitle') ?></small></h1>
