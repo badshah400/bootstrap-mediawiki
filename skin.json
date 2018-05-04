@@ -2,7 +2,7 @@
 	"name": "Bootstrap Mediawiki",
 	"author": [
 		"[http://borkweb.com Matthew Batchelder]",
-		"Atri B <badshah400@gmail.com>"
+		"Atri B"
 	],
 	"url": "https://github.com/badshah400/bootstrap-mediawiki",
 	"descriptionmsg": "bootstrapmediawiki-skin-desc",
