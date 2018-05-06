@@ -82,8 +82,12 @@
 	display: block;
 }
 
+.btn,
+.cancelLink,
+.nav,
 .navbar,
-.subnav {
+.subnav,
+.bottom {
 	font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
