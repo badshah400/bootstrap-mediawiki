@@ -315,12 +315,6 @@ img.thumbborder {
 	border: 1px solid #dddddd;
 }
 
-.brand img {
-	margin-top: 5px;
-	display: inline-block;
-	vertical-align: middle;
-}
-
 .pull-right > li > a {
 	transition: border 0.2s ease-in-out, background-color 0.2s ease-in-out;
 	border: 1px solid transparent;
