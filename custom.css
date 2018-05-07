@@ -252,3 +252,15 @@ fieldset[disabled] .navbar-inverse .btn-link:hover,
 fieldset[disabled] .navbar-inverse .btn-link:focus {
 	color: #444;
 }
+
+/* Smaller h1-h4 fonts for small devices */
+@media (max-width: 767px) {
+	h1 { font-size: 30px; }
+	h2 { font-size: 26px; }
+	h3 { font-size: 24px; }
+	h4 { font-size: 24px; }
+
+/* Hide contents */
+	#page-contents { display: none; }
+
+}
