@@ -167,6 +167,11 @@ body {
 	right: 5px;
 }
 
+/* Best to have Monospace fonts when editing text */
+textarea {
+        font-family: Monospace;
+}
+
 /* Modify navbar-inverse colours for STAR */
 .navbar-inverse {
 	background-color: #003468;
