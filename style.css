@@ -321,6 +321,11 @@ img.thumbborder {
 	vertical-align: middle;
 }
 
+.pull-right > li > a {
+	transition: border 0.3s ease-in-out;
+	border: 1px solid transparent;
+}
+
 /* Subnav */
 .subnav {
 	background: #eee;
