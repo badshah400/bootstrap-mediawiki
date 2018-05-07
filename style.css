@@ -335,7 +335,6 @@ img.thumbborder {
 	   -moz-border-radius: 0;
 	        border-radius: 0;
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
-	position: fixed;
 }
 
 .subnav .container .nav {
