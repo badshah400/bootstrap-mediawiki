@@ -441,6 +441,10 @@ pre.linenums ol {
 @media (max-width: 979px) {
 	body { padding-top: 103px; }
 
+	#wiki-outer-body {
+		margin-top: 65px;
+	}
+
 	.mw-headline {
 		margin-top: -10px;
 		padding-top: 10px;
@@ -509,17 +513,6 @@ pre.linenums ol {
 		background-color: transparent;
 	}
 }
-
-@media (max-width: 979px) {
-	body {
-		padding-top: 59px;
-	}
-
-	#wiki-outer-body {
-		margin-top: 10px;
-	}
-}
-
 
 /* responsive */
 @media (max-width: 480px) {
@@ -795,9 +788,10 @@ input[type="checkbox"]
 .mw-indicators {
 	float: right;
 	margin-right: 5px; /* A light margin right so items
-	                            don't look like falling off */
+	                      don't look like falling off */
 	position: relative;
-	z-index: 1;
+	z-index: 1000; /* Just lower than subnav so that it is above
+	                  all wiki-outer-body elements */
 }
 
 .mw-indicator {
