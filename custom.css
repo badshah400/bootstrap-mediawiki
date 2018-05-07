@@ -139,8 +139,11 @@ body {
 	transition: color 0.2s ease-in-out;
 }
 
+/* Arrive at 1px after much hit and trial to
+ * match vertical alignment with navbar brand
+ */
 .navbar .navbar-nav > li > a {
-	padding: 0.1em 12px;
+	padding: 1px 12px;
 }
 
 .navbar-toggle {
