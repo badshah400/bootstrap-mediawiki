@@ -49,28 +49,17 @@ p {
 	margin-bottom: 9px;;
 }
 
+
 .navbar-brand {
-	margin-top: -3px;
+	display: inline-block !important;
+	vertical-align: middle;
 }
 
 .navbar-brand img {
 	margin-right: 0.5em;
 	max-height: 30px;
-}
-
-.navbar input {
-	background-color: #555;
-	border-color: #111;
-	color: #aaa;
-	margin-bottom: 0;
-}
-
-.navbar .navbar-inner .btn {
-	margin-top: 0;
-}
-
-.nav > li > a {
-	padding: 15px;
+	display: inline-block !important;
+	vertical-align: middle;
 }
 
 .editsection {
@@ -327,21 +316,9 @@ img.thumbborder {
 }
 
 .brand img {
-	margin-top: -5px;
+	margin-top: 5px;
 	display: inline-block;
 	vertical-align: middle;
-}
-
-.navbar-fixed-top .navbar-inner {
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-}
-
-.navbar input {
-	background-color: #f5f5f5;
-	border-color: #ccc;
-	color: #333;
 }
 
 /* Subnav */
@@ -360,35 +337,7 @@ img.thumbborder {
 	   -moz-border-radius: 0;
 	        border-radius: 0;
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
-}
-
-@media (max-width: 767px) {
-	body {
-		padding-left: 0;
-		padding-right: 0;
-		padding-top: 59px;
-	}
-
-	.bottom,
-	#wiki-outer-body {
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-
-	.navbar {
-		margin-left: 0;
-		margin-right: 0;
-	}
-}
-
-@media (max-width: 979px) {
-	body {
-		padding-top: 59px;
-	}
-
-	#wiki-outer-body {
-		margin-top: 10px;
-	}
+	position: fixed;
 }
 
 .subnav .container .nav {
@@ -400,6 +349,7 @@ img.thumbborder {
 	text-decoration: none;
 	color: #333;
 	margin: 0;
+	height: 50px;
 	padding-top:    16px;
 	padding-bottom: 16px;
 	border-left: 1px solid transparent;
@@ -413,6 +363,8 @@ img.thumbborder {
 .subnav .nav > .active > a,
 .subnav .nav > .active > a:hover {
 	color: #333;
+	border-top: none;
+	border-bottom: none;
 	background-color: #ddd;
 	border-right-color: transparent;
 	-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.05);
@@ -522,6 +474,52 @@ pre.linenums ol {
 		padding-top: 1rem;
 	}
 }
+
+@media (max-width: 767px) {
+	body {
+		padding-left: 0;
+		padding-right: 0;
+		padding-top: 59px;
+	}
+
+	.bottom,
+	#wiki-outer-body {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.navbar {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+		color: #aaa;
+		transition: color 0.2s ease-in-out;
+	}
+	.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
+        .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
+		color: #fff;
+		background-color: transparent;
+	}
+
+	.navbar hr {
+		visibility: hidden;
+		color: transparent;
+		background-color: transparent;
+	}
+}
+
+@media (max-width: 979px) {
+	body {
+		padding-top: 59px;
+	}
+
+	#wiki-outer-body {
+		margin-top: 10px;
+	}
+}
+
 
 /* responsive */
 @media (max-width: 480px) {
@@ -785,6 +783,7 @@ table.list th {
 	background-color: #f9f9f9;
 }
 
+/* Necessary to avoid invisible-checkbox problem */
 input[type="checkbox"]
 {
 	opacity: 1   !important;
