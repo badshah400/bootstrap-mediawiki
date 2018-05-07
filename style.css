@@ -352,6 +352,8 @@ img.thumbborder {
 	height: 50px;
 	padding-top:    16px;
 	padding-bottom: 16px;
+	border-top: none !important;
+	border-bottom: none !important;
 	border-left: 1px solid transparent;
 	border-right: 1px solid transparent;
 	-webkit-border-radius: 0;
@@ -363,7 +365,7 @@ img.thumbborder {
 .subnav .nav > .active > a,
 .subnav .nav > .active > a:hover {
 	color: #333;
-	border-top: none;
+	border-top: none !important;
 	border-bottom: none;
 	background-color: #ddd;
 	border-right-color: transparent;
