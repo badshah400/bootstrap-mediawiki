@@ -322,7 +322,7 @@ img.thumbborder {
 }
 
 .pull-right > li > a {
-	transition: border 0.3s ease-in-out;
+	transition: border 0.2s ease-in-out, background-color 0.2s ease-in-out;
 	border: 1px solid transparent;
 }
 
