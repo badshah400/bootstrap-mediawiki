@@ -82,15 +82,165 @@
 	display: block;
 }
 
+/* Customisation of fonts used for different elements */
 .btn,
 .cancelLink,
 .nav,
 .navbar,
 .subnav,
 .bottom {
-	font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
 body {
 	font-family: Merriweather, "Times New Roman", Times, serif;
+}
+
+/* Navbar size, location modifications */
+.navbar {
+  min-height: 50px;
+}
+
+.navbar-nav > li > a {
+  line-height: 20px;
+}
+
+.navbar-fixed-top .navbar-inner {
+	height: 50px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-transform: translate3d(0, 0, 0);
+	     -o-transform: translate3d(0, 0, 0);
+	        transform: translate3d(0, 0, 0);
+}
+
+
+.navbar input {
+	background-color: #f5f5f5;
+	border-color: #ccc;
+	color: #333;
+	margin-bottom: 0;
+}
+
+.navbar .navbar-inner .btn {
+	margin-top: 0;
+}
+
+.nav > li > a {
+	padding: 15px;
+}
+
+.navbar-brand {
+  height: 50px;
+  padding: 11px 15px;
+  font-size: 18px;
+  line-height: 20px;
+  transition: color 0.2s ease-in-out;
+}
+
+.navbar .navbar-nav > li > a {
+    padding: 0.1em 12px;
+}
+
+.navbar-toggle {
+  margin: 6px 10px;
+}
+
+.navbar .form-control {
+  display: block;
+  width: 100%;
+  height: 28px;
+  padding: 0px 12px;
+}
+
+.navbar .dropdown-menu
+{
+	top:80%;
+	left: 5px;
+}
+
+.navbar-right .dropdown-menu
+{
+	top:80%;
+	left: initial;
+	right: 5px;
+}
+
+/* Modify navbar-inverse colours for STAR */
+.navbar-inverse {
+  background-color: #003468;
+  border-color: #080808;
+}
+.navbar-inverse .navbar-brand {
+  color: #bbb;
+}
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+  color: #fff;
+  background-color: transparent;
+}
+.navbar-inverse .navbar-text {
+  color: #bbb;
+}
+.navbar-inverse .navbar-nav > li > a {
+  transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  color: #bbb;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: #fff;
+  background-color: transparent;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: #080808;
+}
+.navbar-inverse .navbar-nav > .disabled > a,
+.navbar-inverse .navbar-nav > .disabled > a:hover,
+.navbar-inverse .navbar-nav > .disabled > a:focus {
+  color: #444;
+  background-color: transparent;
+}
+.navbar-inverse .navbar-toggle {
+  border-color: #333;
+}
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+  background-color: #333;
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+  border-color: #101010;
+}
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+  color: #fff;
+  background-color: #024;
+}
+
+.navbar-inverse .navbar-link {
+  color: #777;
+}
+.navbar-inverse .navbar-link:hover {
+  color: #fff;
+}
+.navbar-inverse .btn-link {
+  color: #777;
+}
+.navbar-inverse .btn-link:hover,
+.navbar-inverse .btn-link:focus {
+  color: #fff;
+}
+.navbar-inverse .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-inverse .btn-link:hover,
+.navbar-inverse .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-inverse .btn-link:focus {
+  color: #444;
 }
