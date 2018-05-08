@@ -798,3 +798,12 @@ input[type="checkbox"]
 	display: inline-block;
 	zoom: 1;
 }
+
+@media print {
+	a[href]:after {
+		content: none !important;
+	}
+	.mw-indicators {
+		display: none;
+	}
+}
