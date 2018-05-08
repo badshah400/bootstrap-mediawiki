@@ -19,7 +19,7 @@ See [LICENSE](LICENSE) for more details.
 First, clone the repository into your `skins/` directory.
 
 ```
-git clone https://github.com/borkweb/bootstrap-mediawiki.git BootstrapMediaWiki
+git clone https://github.com/badshah400/bootstrap-mediawiki.git BootstrapMediaWiki
 ```
 
 Next, in `LocalSettings.php` set:
