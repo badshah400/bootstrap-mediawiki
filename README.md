@@ -2,7 +2,12 @@
 
 This is an updated version of the excellent [Bootstrap MediaWiki skin](https://github.com/borkweb/bootstrap-mediawiki) by Matthew Batchelder. This version is updated to be compatible with and up to [MediaWiki 1.31rc0](https://www.mediawiki.org/wiki/Download), and to mirror the crisp look of the Bootswatch theme [Readable](https://bootswatch.com/3/readable/).
 
-This version of the theme is used to serve the [IFPA group's website](http://www.theo.phys.ulg.ac.be/wiki/Welcome_to_IFPA) at the [Université de Liège](https://www.uliege.be/). The custom branding to cater to the IFPA are contained separately in the [custom.css](custom.css) file, and is not used by default. You may choose to explicitly specify `$wgSiteCSS = 'custom.css';` in your `LocalSettings.php` to use it. This, possibly along with minor adjustments to [style.css](style.css), is also where you would want to add in your customisation.
+This version of the theme is used to serve the [IFPA group's website](http://www.theo.phys.ulg.ac.be/wiki/Welcome_to_IFPA) at the [Université de Liège](https://www.uliege.be/). The custom branding to cater to the IFPA are contained separately in the [custom.css](custom.css) file, and is not used by default. You may choose to explicitly specify 
+```
+$wgSiteCSS = 'custom.css';
+$wgNavBarClasses = 'navbar-inverse';
+```
+in your `LocalSettings.php` to use it. This, possibly along with minor adjustments to [style.css](style.css), is also where you would want to add in your own customisation.
 
 ![Screenshot](screenshots/BootstrapMW-1280x800.png)
 
