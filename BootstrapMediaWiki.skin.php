@@ -232,7 +232,7 @@ class BootstrapMediaWikiTemplate extends BaseTemplate {
 				<!-- /newtalk -->
 				<?php endif; ?>
 
-				<?php if ( ! empty( $this->data['indicators'] ) ) echo $this->getIndicators(); ?>
+				<div class="hidden-print"><?php if ( ! empty( $this->data['indicators'] ) ) echo $this->getIndicators(); ?></div>
 
 				<div class="pagetitle page-header hidden-print">
 					<h1><?php $this->html( 'title' ) ?> <small><?php $this->html('subtitle') ?></small></h1>

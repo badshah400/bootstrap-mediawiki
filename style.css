@@ -803,7 +803,4 @@ input[type="checkbox"]
 	a[href]:after {
 		content: none !important;
 	}
-	.mw-indicators {
-		display: none;
-	}
 }
