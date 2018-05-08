@@ -1,29 +1,36 @@
 # Bootstrap Mediawiki
 
-This is a MediaWiki skin that uses Bootstrap 3 from Twitter!  The framework gives a boatload of features that play really nicely with a MediaWiki installation.  To get up and rolling, there's a few things that should be done.
+This is an updated version of the excellent [Bootstrap MediaWiki skin](https://github.com/borkweb/bootstrap-mediawiki) by Matthew Batchelder. This version is updated to be compatible with and up to [MediaWiki 1.31rc0](https://www.mediawiki.org/wiki/Download), and to mirror the crisp look of the Bootswatch theme [Readable](https://bootswatch.com/3/readable/).
 
-If you'd like to see one of these in the wild, check out the [EotL Wiki](http://eotl.borkweb.com).
+This version of the theme is used to serve the [IFPA group's website](http://www.theo.phys.ulg.ac.be/wiki/Welcome_to_IFPA) at the [Université de Liège](https://www.uliege.be/). The custom branding to cater to the IFPA are contained separately in the [custom.css](custom.css) file, and is not used by default. You may choose to explicitly specify `$wgSiteCSS = 'custom.css';` in your `LocalSettings.php` to use it. This, possibly along with minor adjustments to [style.css](style.css), is also where you would want to add in your customisation.
 
-![Screenshot](https://raw.githubusercontent.com/borkweb/bootstrap-mediawiki/master/images/bootstrap-mediawiki-screenshot.png)
+![Screenshot](screenshots/BootstrapMW-1280x800.png)
+
+## License ##
+The theme is licensed for use under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This theme is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+
+See [LICENSE](LICENSE) for more details.
 
 ## Installation
 First, clone the repository into your `skins/` directory.
 
 ```
-git clone https://github.com/borkweb/bootstrap-mediawiki.git
+git clone https://github.com/borkweb/bootstrap-mediawiki.git BootstrapMediaWiki
 ```
 
 Next, in `LocalSettings.php` set:
 
-```php
+```
+wfLoadSkin( 'BootstrapMediaWiki' );
 $wgDefaultSkin = 'bootstrapmediawiki';
 ```
 
-Then add at the bottom:
-
-```php
-require_once( "$IP/skins/bootstrap-mediawiki/bootstrap-mediawiki.php" );
-```
+<br />
+The **post-installation setup** for this version of the theme follows the [original](http://borkweb.github.io/bootstrap-mediawiki/), and is reproduced here for completeness.
 
 ## Setup
 Once you've enabled the skin, you'll want to create a few pages.
@@ -43,7 +50,7 @@ Variable | Description
 ### Useful templates for your wiki
 
 #### Create: Bootstrap:Footer
-This MediaWiki page will contain what appears in your footer.  I've set mine to the following:
+This MediaWiki page will contain what appears in your footer.  For example:
 
 ```html
 <div class="row">
