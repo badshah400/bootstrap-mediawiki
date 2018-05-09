@@ -472,7 +472,7 @@ class BootstrapMediaWikiTemplate extends BaseTemplate {
 				case 'Watch':        $icon = 'eye'; break;
 				case 'Unwatch':      $icon = 'eye-slash'; break;
 				case 'Category':     $icon = 'tags'; break;
-				case 'Special page': $icon = 'sliders'; break;
+				case 'Special page': $icon = 'star'; break;
 				default:             $icon = 'file'; break;
 				}//end switch
 
