@@ -135,7 +135,7 @@ body {
 	height: 50px;
 	padding: 11px 15px;
 	font-size: 18px;
-	line-height: 20px;
+	line-height: inherit;
 	transition: color 0.2s ease-in-out;
 }
 
@@ -143,7 +143,8 @@ body {
  * match vertical alignment with navbar brand
  */
 .navbar .navbar-nav > li > a {
-	padding: 1px 12px;
+	padding: 4px 12px;
+	margin: 10px 5px 5px 5px;
 }
 
 .navbar-toggle {
@@ -153,19 +154,19 @@ body {
 .navbar .form-control {
 	display: block;
 	width: 100%;
-	height: 28px;
+	height: 25px;
 	padding: 0px 12px;
 }
 
 .navbar .dropdown-menu
 {
-	top:80%;
+	top:90%;
 	left: 5px;
 }
 
 .navbar-right .dropdown-menu
 {
-	top:80%;
+	top: 90%;
 	left: initial;
 	right: 5px;
 }
