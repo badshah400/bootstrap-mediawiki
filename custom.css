@@ -160,13 +160,13 @@ body {
 
 .navbar .dropdown-menu
 {
-	top:90%;
+	top: 95%;
 	left: 5px;
 }
 
 .navbar-right .dropdown-menu
 {
-	top: 90%;
+	top: 95%;
 	left: initial;
 	right: 5px;
 }
