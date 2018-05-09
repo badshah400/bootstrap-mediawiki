@@ -224,7 +224,7 @@ option.unclickable {
 }
 
 a.external {
-	background: url("https://upload.wikimedia.org/wikipedia/commons/4/44/Icon_External_Link.svg") center right no-repeat; padding-right: 14px;
+	background: url("images/external-link.svg") center right no-repeat; padding-right: 14px;
 }
 
 #catlinks {
