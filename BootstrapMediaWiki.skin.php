@@ -459,18 +459,21 @@ class BootstrapMediaWikiTemplate extends BaseTemplate {
 
 			if( 'page' == $which ) {
 				switch( $link['title'] ) {
-				case 'Main page': $icon = 'home'; break;
-				case 'Page': $icon = 'file'; break;
-				case 'User page': $icon = 'user'; break;
-				case 'Discussion': $icon = 'comments'; break;
-				case 'Edit': $icon = 'pencil'; break;
-				case 'History': $icon = 'clock-o'; break;
-				case 'Delete': $icon = 'remove'; break;
-				case 'Move': $icon = 'arrows'; break;
-				case 'Protect': $icon = 'lock'; break;
+				case 'Main page':    $icon = 'home'; break;
+				case 'Page':         $icon = 'file'; break;
+				case 'User page':    $icon = 'user'; break;
+				case 'Discussion':   $icon = 'comments'; break;
+				case 'Edit':         $icon = 'pencil'; break;
+				case 'History':      $icon = 'clock-o'; break;
+				case 'Delete':       $icon = 'remove'; break;
+				case 'Move':         $icon = 'arrows'; break;
+				case 'Protect':      $icon = 'lock'; break;
 				case 'Change protection': $icon = 'unlock'; break;
-				case 'Watch': $icon = 'eye'; break;
-				case 'Unwatch': $icon = 'eye-slash'; break;
+				case 'Watch':        $icon = 'eye'; break;
+				case 'Unwatch':      $icon = 'eye-slash'; break;
+				case 'Category':     $icon = 'tags'; break;
+				case 'Special page': $icon = 'sliders'; break;
+				default:             $icon = 'file'; break;
 				}//end switch
 
 				$link['title'] = '<i class="fa fa-' . $icon . '"></i> ' . $link['title'];
