@@ -134,13 +134,13 @@ class BootstrapMediaWikiTemplate extends BaseTemplate {
 									<li><a href="<?php echo $url_prefix; ?>Special:SpecialPages" class="special-pages"><i class="fa fa-star-o"></i> Special Pages</a></li>
 									<?php if ( $wgEnableUploads ) { ?>
                                                                         <li><a href="<?php echo $url_prefix; ?>Protected:BatchUpload" class="upload-a-file"><i class="fa fa-upload"></i> Upload Files</a></li>
+									<?php } ?>
                                                                         <hr style="margin:2px 0px;">
 									<li><a href="<?php echo $url_prefix; ?>Special:Book?bookcmd=book_creator&referer=<?php echo $this->html( 'title' ); ?>" class="book-creator"><i class="fa fa-book"></i> Start Book Creator</a></li>
 									<li><a href="<?php echo $url_prefix; ?>Special:Book?bookcmd=render_article&arttitle=<?php echo $this->html( 'title' ); ?>" class="render-page"><i class="fa fa-file-pdf-o"></i> Render page as PDF</a></li>
 									<li><a href="<?php echo $url_prefix; ?>Special:Book?bookcmd=render_article&arttitle=<?php echo $this->html( 'title' ); ?>&writer=odf" class="render-page"><i class="fa fa-file-word-o"></i> Render page as ODT</a></li>
                                                                         <hr style="margin:2px 0px;">
 									<li><a href="<?php echo $url_prefix; ?>Help:Tips and Tricks" class="tips-and-tricks"><i class="fa fa-question-circle"></i> Help</a></li>
-									<?php } ?>
 								</ul>
 							</li>
 							<?php echo $this->nav( $this->get_page_links( 'Bootstrap:TitleBar' ) ); ?>
