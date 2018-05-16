@@ -97,11 +97,15 @@ class BootstrapMediaWikiTemplate extends BaseTemplate {
 		global $wgTOCLocation;
 		global $wgNavBarClasses;
 		global $wgSubnavBarClasses;
+		global $wgUploadNavigationUrl;
 
 		$this->skin = $this->data['skin'];
 		$action = $wgRequest->getText( 'action' );
 		$url_prefix = str_replace( '$1', '', $wgArticlePath );
 		$linkRenderer = MediaWikiServices::getInstance()->getLinkRenderer();
+
+		// Set uploadurl to custom URL if $wgUploadNavigationUrl is set, otherwise to MW default
+		$uploadurl = ( $wgUploadNavigationUrl == '' ) ? $url_prefix . 'Special:Upload' : $wgUploadNavigationUrl;
 
 		// Suppress warnings to prevent notices about missing indexes in $this->data
 		wfSuppressWarnings();
@@ -133,7 +137,7 @@ class BootstrapMediaWikiTemplate extends BaseTemplate {
 									<li><a href="<?php echo $url_prefix; ?>Special:RecentChanges" class="recent-changes"><i class="fa fa-edit"></i> Recent Changes</a></li>
 									<li><a href="<?php echo $url_prefix; ?>Special:SpecialPages" class="special-pages"><i class="fa fa-star-o"></i> Special Pages</a></li>
 									<?php if ( $wgEnableUploads ) { ?>
-                                                                        <li><a href="<?php echo $url_prefix; ?>Protected:BatchUpload" class="upload-a-file"><i class="fa fa-upload"></i> Upload Files</a></li>
+									<li><a href="<?php echo $uploadurl; ?>" class="upload-a-file"><i class="fa fa-upload"></i> Upload Files</a></li>
 									<?php } ?>
                                                                         <hr style="margin:2px 0px;">
 									<li><a href="<?php echo $url_prefix; ?>Special:Book?bookcmd=book_creator&referer=<?php echo $this->html( 'title' ); ?>" class="book-creator"><i class="fa fa-book"></i> Start Book Creator</a></li>
